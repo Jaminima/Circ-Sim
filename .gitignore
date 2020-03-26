@@ -1,0 +1,12 @@
+.vs/
+obj/
+Debug/
+Release/
+Bin/
+Packages/
+*.csproj
+Build/
+Logs/
+Library/
+Temp/
+Builds/
