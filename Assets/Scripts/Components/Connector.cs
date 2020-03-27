@@ -10,8 +10,18 @@ public class Connector : MonoBehaviour
         set { GetComponent<SpriteRenderer>().color = value; }
     }
 
-    public void OnMouseUp()
+    public void OnMouseDown()
     {
         InteractionEngine.target = this;
+    }
+
+    public GateTextureData gateTextureData
+    {
+        get { return GetComponentInParent<GateTextureData>(); }
+    }
+
+    public LogicGate logicGate
+    {
+        get { return GetComponentInParent<LogicGate>(); }
     }
 }

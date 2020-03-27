@@ -99,7 +99,7 @@ MonoBehaviour:
   logicGate: {fileID: 5605362532142741329}
   Conn_In_Points: []
   Conn_Out_Points:
-  - {fileID: 3198458757421132563}
+  - {fileID: 3139321662608664332}
 --- !u!114 &5605362532142741329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,9 +205,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8826391203689876590}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &3198458757421132563 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6205557049892513661, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
+--- !u!114 &3139321662608664332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5903295943962995554, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
     type: 3}
   m_PrefabInstance: {fileID: 8826391203689876590}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6dbcea440af7f49b80aec56127700c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
