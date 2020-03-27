@@ -14,9 +14,9 @@ public static class InteractionEngine
 
     public static Connector target
     {
-        set { 
+        set {
             if (Source) { Dest = value; CreateConnection(); }
-            else Source = value; 
+            else Source = value;
         }
     }
 

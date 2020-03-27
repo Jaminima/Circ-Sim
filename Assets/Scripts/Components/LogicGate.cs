@@ -38,6 +38,11 @@ public class Connection
         get { return source.Outputs[sourcePort]; }
     }
 
+    public bool IsProper
+    {
+        get { return source && destination; }
+    }
+
     public Connection() { }
 
     public Connection(Connector source, Connector dest)

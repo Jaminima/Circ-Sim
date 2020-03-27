@@ -1,13 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Switch : InputGate
 {
-    public bool State = false;
-
-    public override void UpdateOutputs()
-    {
-        Outputs[0] = State;
-    }
 }

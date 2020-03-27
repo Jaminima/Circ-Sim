@@ -12,7 +12,10 @@ public class Connector : MonoBehaviour
 
     public void OnMouseDown()
     {
-        InteractionEngine.target = this;
+        if (Input.GetMouseButtonDown(0))
+        {
+            InteractionEngine.target = this;
+        }
     }
 
     public GateTextureData gateTextureData

@@ -5,6 +5,11 @@ using System.Linq;
 
 public class CircuitProcessor : MonoBehaviour
 {
+    public void FixedUpdate()
+    {
+        UpdateAll();
+    }
+
     public void UpdateAll()
     {
         List<LogicGate> pendingGates = new List<LogicGate>(),
@@ -17,7 +22,7 @@ public class CircuitProcessor : MonoBehaviour
             finishedGates.Add(input);
 
             tGate = input.Output_Conns[0].destination;
-            if (!pendingGates.Contains(tGate))
+            if (!pendingGates.Contains(tGate) && tGate)
                 pendingGates.Add(tGate);
         }
 
@@ -32,7 +37,7 @@ public class CircuitProcessor : MonoBehaviour
 
                 finishedGates.Add(tGate);
             }
-            else
+            else if (tGate.Input_Conns.Count(x => !x.IsProper) == 0)
             {
                 pendingGates.Add(tGate);
             }
