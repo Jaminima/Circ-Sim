@@ -36,8 +36,9 @@ public class CircuitProcessor : MonoBehaviour
             {
                 pendingGates.Add(tGate);
             }
-
         }
+
+        GateTextureData.gateTextureDatas.ToList().ForEach(x => x.UpdateIndicators());
     }
 
     public void ConnectGates(LogicGate source, int sourcePort, LogicGate dest, int destPort)
