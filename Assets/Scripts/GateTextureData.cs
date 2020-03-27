@@ -31,6 +31,20 @@ public class GateTextureData : MonoBehaviour
         }
     }
 
+    Vector3 mPos, gPos;
+    public void OnMouseDown()
+    {
+        mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        gPos = transform.position;
+    }
+
+    public void OnMouseDrag()
+    {
+        Vector3 mChange = mPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        transform.position = gPos - mChange;
+    }
+
     public void ConnectionClicked()
     {
 
