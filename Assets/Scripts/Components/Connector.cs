@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Connector : MonoBehaviour
 {
+    public bool IsInput;
+
     public Color color
     {
         get { return GetComponent<SpriteRenderer>().color; }
@@ -14,7 +16,10 @@ public class Connector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            InteractionEngine.target = this;
+            if (!IsInput) InteractionEngine.Source = this;
+            else InteractionEngine.Dest = this;
+
+            InteractionEngine.DoAction();
         }
     }
 

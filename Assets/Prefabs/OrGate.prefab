@@ -118,19 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Input_Conns:
-  - source: {fileID: 0}
-    destination: {fileID: 0}
-    sourcePort: 0
-    destPort: 0
-  - source: {fileID: 0}
-    destination: {fileID: 0}
-    sourcePort: 0
-    destPort: 0
+  - {fileID: 0}
+  - {fileID: 0}
   Output_Conns:
-  - source: {fileID: 0}
-    destination: {fileID: 0}
-    sourcePort: 0
-    destPort: 0
+  - {fileID: 0}
   Outputs: 00
 --- !u!61 &8576303583767005049
 BoxCollider2D:
@@ -165,6 +156,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2926073330582136421}
     m_Modifications:
+    - target: {fileID: 5903295943962995554, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
+        type: 3}
+      propertyPath: IsInput
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6275405816406394694, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -252,6 +248,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2926073330582136421}
     m_Modifications:
+    - target: {fileID: 5903295943962995554, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
+        type: 3}
+      propertyPath: IsInput
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6275405816406394694, guid: 5f02ad10b2f85c0499fe777ba78dd45e,
         type: 3}
       propertyPath: m_LocalPosition.x

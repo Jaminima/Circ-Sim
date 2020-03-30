@@ -12,12 +12,9 @@ public static class InteractionEngine
 
     public static Connector Source, Dest;
 
-    public static Connector target
+    public static void DoAction()
     {
-        set {
-            if (Source) { Dest = value; CreateConnection(); }
-            else Source = value;
-        }
+        if (Source && Dest) { CreateConnection(); }
     }
 
     private static void CreateConnection()

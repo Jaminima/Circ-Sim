@@ -50,16 +50,19 @@ public class CircuitProcessor : MonoBehaviour
 
     public void ConnectGates(LogicGate source, int sourcePort, LogicGate dest, int destPort)
     {
-        Connection conn = GameObject.Instantiate(default_Connection);
-        conn.source = source;
-        conn.destination = dest;
+        if (sourcePort != -1 && destPort != -1)
+        {
+            Connection conn = GameObject.Instantiate(default_Connection);
+            conn.source = source;
+            conn.destination = dest;
 
-        conn.sourcePort = sourcePort;
-        conn.destPort = destPort;
+            conn.sourcePort = sourcePort;
+            conn.destPort = destPort;
 
-        source.Output_Conns[sourcePort] = conn;
-        dest.Input_Conns[destPort] = conn;
+            source.Output_Conns[sourcePort] = conn;
+            dest.Input_Conns[destPort] = conn;
 
-        conn.Draw();
+            conn.Draw();
+        }
     }
 }
