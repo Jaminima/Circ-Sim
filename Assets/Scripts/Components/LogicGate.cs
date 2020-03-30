@@ -25,41 +25,9 @@ public class LogicGate : MonoBehaviour
     {
         get { return FindObjectsOfType<LogicGate>(); }
     }
-}
 
-[Serializable]
-public class Connection
-{
-    public LogicGate source, destination;
-    public int sourcePort, destPort;
-
-    public bool State
+    public GateTextureData gateTexture
     {
-        get { return source.Outputs[sourcePort]; }
-    }
-
-    public bool IsProper
-    {
-        get { return source && destination; }
-    }
-
-    public Connection() { }
-
-    public Connection(Connector source, Connector dest)
-    {
-        GateTextureData sourceGate = source.GetComponentInParent<GateTextureData>(),
-            destGate = dest.GetComponentInParent<GateTextureData>();
-
-        int sourcePort = sourceGate.Conn_Out_Points.ToList().IndexOf(source),
-            destPort = destGate.Conn_In_Points.ToList().IndexOf(dest);
-
-        this.source = sourceGate.logicGate;
-        this.destination = destGate.logicGate;
-
-        this.sourcePort = sourcePort;
-        this.destPort = destPort;
-
-        this.source.Output_Conns[sourcePort] = this;
-        this.destination.Input_Conns[destPort] = this;
+        get { return GetComponent<GateTextureData>(); }
     }
 }
