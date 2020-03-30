@@ -43,6 +43,10 @@ public class CircuitProcessor : MonoBehaviour
             {
                 pendingGates.Add(tGate);
             }
+
+            foreach (Connection conn in tGate.Output_Conns.Where(x=>x)) {
+                if (!pendingGates.Contains(conn.destination) && !finishedGates.Contains(conn.destination)) 
+                    pendingGates.Add(conn.destination); }
         }
 
         GateTextureData.gateTextureDatas.ToList().ForEach(x => x.UpdateIndicators());

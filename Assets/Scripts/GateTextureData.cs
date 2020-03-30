@@ -23,6 +23,7 @@ public class GateTextureData : MonoBehaviour
                 if (logicGate.Input_Conns[i].State) Conn_In_Points[i].color = Color.green;
                 else Conn_In_Points[i].color = Color.red;
             }
+            else Conn_In_Points[i].color = Color.blue;
         }
 
         for (int i = 0; i < Conn_Out_Points.Length; i++)
